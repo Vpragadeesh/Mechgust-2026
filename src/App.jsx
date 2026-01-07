@@ -14,6 +14,8 @@ import Contactus from './components/Contactus'
 
 import { initializeAnimations, addHoverAnimations, initScrollAnimations } from './utils/animations'
 
+const basename = import.meta.env.MODE === 'production' ? '/Mechgust-2026' : ''
+
 function ScrollToTop() {
   const { pathname } = useLocation()
   
@@ -48,7 +50,7 @@ function HomePage() {
 
 export default function App() {
   return (
-    <BrowserRouter basename="/Sample26">
+    <BrowserRouter basename={basename}>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />

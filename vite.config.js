@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-export default defineConfig({
-  base: '/Mechgust-2026/',
+export default defineConfig(({ mode }) => ({
+  base: mode === 'production' ? '/Mechgust-2026/' : '/',
   plugins: [react()],
   server: {
     port: 5173,
@@ -16,4 +16,4 @@ export default defineConfig({
     emptyOutDir: true,
     sourcemap: false
   }
-})
+}))
