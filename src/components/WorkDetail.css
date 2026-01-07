@@ -1,0 +1,586 @@
+/* ============================================
+   WORK DETAIL ANIMATIONS & STYLES
+   Performance-optimized for college symposium
+   ============================================ */
+
+/* CSS Custom Properties for easy theming */
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #999999;
+  --accent-red: #ff0000;
+  --bg-dark: #000000;
+  --border-light: rgba(255, 255, 255, 0.3);
+  --border-hover: rgba(255, 255, 255, 0.5);
+  --transition-ease: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ============================================
+   KEYFRAME ANIMATIONS
+   ============================================ */
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7), inset 0 0 0 0 rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0), inset 0 0 0 2px rgba(255, 255, 255, 0.2);
+  }
+}
+
+@keyframes pulseGlowRed {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7), inset 0 0 0 0 rgba(255, 0, 0, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(255, 0, 0, 0), inset 0 0 0 2px rgba(255, 0, 0, 0.2);
+  }
+}
+
+@keyframes imageZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bgGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-10px);
+  }
+  75% {
+    transform: translateY(-15px) translateX(15px);
+  }
+}
+
+/* ============================================
+   PAGE CONTAINER
+   ============================================ */
+
+.work-detail-page {
+  background: linear-gradient(-45deg, #000000, #0a0a0a, #1a1a1a, #0a0a0a);
+  background-size: 400% 400%;
+  animation: bgGradient 15s ease infinite;
+  color: var(--primary-color);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Subtle animated background particles effect */
+.work-detail-page::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 0, 0, 0.02) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+  animation: float 20s ease-in-out infinite;
+}
+
+.work-detail-page > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ============================================
+   CLOSE BUTTON
+   ============================================ */
+
+.close-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  will-change: transform, background-color;
+  animation: slideInUp 0.6s ease-out;
+}
+
+.close-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.close-button:active {
+  transform: scale(0.98);
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .close-button {
+    top: 15px;
+    right: 15px;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* ============================================
+   EVENTS SECTION
+   ============================================ */
+
+.events-section {
+  padding: 120px 20px;
+  background: var(--bg-dark);
+}
+
+@media (max-width: 768px) {
+  .events-section {
+    padding: 80px 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .events-section {
+    padding: 60px 16px;
+  }
+}
+
+/* ============================================
+   SECTION TITLE
+   ============================================ */
+
+.events-title {
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 80px;
+  text-align: center;
+  background: linear-gradient(135deg, #fff 0%, #999 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: slideInUp 0.8s ease-out;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .events-title {
+    font-size: 48px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 640px) {
+  .events-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+}
+
+/* ============================================
+   EVENTS GRID
+   ============================================ */
+
+.events-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+@media (max-width: 768px) {
+  .events-grid {
+    gap: 48px;
+  }
+}
+
+@media (max-width: 640px) {
+  .events-grid {
+    gap: 36px;
+  }
+}
+
+/* ============================================
+   EVENT CARD
+   ============================================ */
+
+.event-card {
+  border: 2px dashed var(--border-light);
+  border-radius: 20px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: transform, border-color, box-shadow, background-color;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Scroll-based reveal */
+.event-card.visible {
+  animation: slideInUp 0.6s ease-out forwards !important;
+}
+
+.event-card:hover {
+  border-color: var(--primary-color);
+  border-style: solid;
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-8px);
+  box-shadow: 0 24px 48px rgba(255, 255, 255, 0.15);
+}
+
+/* Red event variant */
+.event-card.red-event:hover {
+  border-color: var(--accent-red);
+  box-shadow: 0 24px 48px rgba(255, 0, 0, 0.25);
+}
+
+/* Mobile grid adaptation */
+@media (max-width: 1024px) {
+  .event-card {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .event-card {
+    border-radius: 16px;
+    padding: 24px;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .event-card {
+    border-radius: 12px;
+    padding: 20px;
+    gap: 16px;
+  }
+}
+
+/* ============================================
+   EVENT CONTENT (LEFT COLUMN)
+   ============================================ */
+
+.event-content {
+  /* Content always visible */
+}
+
+.event-section-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+  margin-top: 0;
+}
+
+.event-section-title:first-child {
+  margin-top: 0;
+}
+
+.event-description {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: var(--secondary-color);
+  transition: all 0.3s ease;
+  white-space: pre-line;
+}
+
+@media (max-width: 768px) {
+  .event-section-title {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .event-description {
+    font-size: 13px;
+    margin-bottom: 24px;
+  }
+}
+
+/* ============================================
+   EVENT RULES
+   ============================================ */
+
+.event-rules {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.rule-item {
+  font-size: 14px;
+  color: var(--secondary-color);
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+}
+
+.rule-item:hover {
+  color: var(--primary-color);
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  .rule-item {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+}
+
+/* ============================================
+   REGISTER BUTTON
+   ============================================ */
+
+.register-btn {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: var(--primary-color);
+  padding: 12px 40px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.4s var(--transition-ease);
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+.register-btn:hover {
+  background: var(--primary-color);
+  color: var(--bg-dark);
+  border-color: var(--primary-color);
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.register-btn:active {
+  transform: scale(0.98);
+}
+
+.event-card.red-event .register-btn:hover {
+  background: var(--accent-red);
+  border-color: var(--accent-red);
+  color: var(--primary-color);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .register-btn {
+    padding: 10px 32px;
+    font-size: 11px;
+  }
+}
+
+/* ============================================
+   EVENT IMAGE (RIGHT COLUMN)
+   ============================================ */
+
+.event-image-wrapper {
+  position: relative;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  will-change: transform;
+  background: #1a1a1a;
+}
+
+@media (max-width: 1024px) {
+  .event-image-wrapper {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .event-image-wrapper {
+    height: 200px;
+  }
+}
+
+@media (max-width: 640px) {
+  .event-image-wrapper {
+    height: 180px;
+  }
+}
+
+.event-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: transform;
+}
+
+.event-image-wrapper:hover .event-image {
+  transform: scale(1.1);
+}
+
+/* Image overlay for depth */
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+/* ============================================
+   ALTERNATING CARD ANIMATIONS (for AOS)
+   ============================================ */
+
+/* Odd cards: fade in from left */
+.event-card:nth-child(odd) {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+/* Even cards: fade in from right */
+.event-card:nth-child(even) {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+/* Reset for scroll-based reveals */
+.event-card.visible {
+  animation-play-state: running !important;
+}
+
+/* ============================================
+   ACCESSIBILITY & REDUCED MOTION
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .work-detail-page {
+    animation: none !important;
+  }
+
+  .work-detail-page::before {
+    animation: none !important;
+  }
+
+  .event-card,
+  .event-content,
+  .rule-item,
+  .register-btn,
+  .event-image-wrapper,
+  .event-image,
+  .close-button,
+  .events-title {
+    animation: none !important;
+    transition: color 0.3s ease, background-color 0.3s ease !important;
+  }
+}
+
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+/* GPU acceleration for smooth animations */
+.event-card,
+.event-image,
+.register-btn,
+.close-button {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Reduce animation on mobile devices */
+@media (max-width: 640px) {
+  .event-card {
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+
+  .event-image:hover {
+    transform: scale(1.05);
+  }
+}
