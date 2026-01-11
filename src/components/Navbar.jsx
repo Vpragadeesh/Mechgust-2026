@@ -1,17 +1,16 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 export default function Navbar(){
-  const [isOpen, setIsOpen] = useState(false)
   const location = useLocation()
 
   const navLinks = [
     { path: '/', label: 'HOME' },
     { path: '/about', label: 'ABOUT' },
     { path: '/tech', label: 'TECHNICAL' },
-    { path: '/nontech', label: 'NON-TECHNICAL' },
+    { path: '/nontech', label: 'NON-TECH' },
     { path: '/workshops', label: 'WORKSHOPS' },
-    { path: '/onlineevents', label: 'ONLINE EVENTS' },
+    { path: '/onlineevents', label: 'ONLINE' },
     { path: '/contact', label: 'CONTACT' }
   ]
 
@@ -53,37 +52,6 @@ export default function Navbar(){
           </Link>
         </div>
       </div>
-      <div className="menu-button w-nav-button" onClick={()=> setIsOpen(!isOpen)}>
-        <div className="burger-icon invert w-icon-nav-menu"></div>
-      </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="mobile-nav-menu" style={{
-          position: 'fixed',
-          top: '60px',
-          left: 0,
-          right: 0,
-          background: '#000',
-          padding: '1rem',
-          zIndex: 999,
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '1rem'
-        }}>
-          {navLinks.map(link => (
-            <Link 
-              key={link.path}
-              to={link.path} 
-              className="nav-link w-nav-link"
-              onClick={() => setIsOpen(false)}
-              style={{ color: location.pathname === link.path ? '#fff' : '#888' }}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </div>
-      )}
     </nav>
   )
 }

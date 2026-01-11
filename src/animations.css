@@ -313,3 +313,119 @@
     font-size: clamp(28px, 10vw, 48px) !important;
   }
 }
+
+/* Force desktop navbar on mobile - only apply compact styles on small screens */
+@media screen and (max-width: 991px) {
+  .navbar {
+    height: auto !important;
+    min-height: 60px;
+    padding: 0.5rem 3% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  .nav-menu {
+    background-color: transparent !important;
+    flex-direction: row !important;
+    position: static !important;
+    padding-top: 0 !important;
+    display: flex !important;
+    align-items: center;
+    gap: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-link {
+    font-size: 0.65rem !important;
+    line-height: 1.2 !important;
+    min-height: auto !important;
+    padding: 0.5rem 0.5rem !important;
+    white-space: nowrap;
+  }
+
+  .nav-link-wrapper {
+    display: inline-block;
+  }
+
+  .menu-button,
+  .w-nav-button {
+    display: none !important;
+  }
+
+  .mobile-nav-menu {
+    display: none !important;
+  }
+
+  .logo-link-wrapper {
+    flex-shrink: 0;
+  }
+
+  .logo {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .hide-on-mobile {
+    display: flex !important;
+  }
+
+  .button-with-circle-icon {
+    padding: 0.3rem 0.8rem !important;
+    font-size: 0.7rem !important;
+  }
+
+  .button-flex {
+    min-width: auto !important;
+    min-height: auto !important;
+    padding: 0.2rem 0.5rem !important;
+  }
+
+  .button-arrow-wrapper {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .button-icon {
+    width: 12px !important;
+    height: 12px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 2% !important;
+  }
+  
+  .nav-link {
+    font-size: 0.55rem !important;
+    padding: 0.4rem 0.35rem !important;
+  }
+  
+  .logo {
+    width: 24px !important;
+    height: 24px !important;
+  }
+  
+  .button-flex {
+    display: none !important;
+  }
+  
+  .button-arrow-wrapper {
+    width: 24px !important;
+    height: 24px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav-link {
+    font-size: 0.5rem !important;
+    padding: 0.3rem 0.25rem !important;
+  }
+  
+  .logo {
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
