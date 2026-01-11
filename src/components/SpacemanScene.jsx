@@ -160,7 +160,7 @@ export default function SpacemanScene({className = 'spline'}){
     }
   }, [])
 
-  // Mobile fallback - show static image or gradient instead of 3D
+  // Mobile fallback - show static rocket image instead of 3D
   if (isMobile) {
     return (
       <div 
@@ -176,13 +176,56 @@ export default function SpacemanScene({className = 'spline'}){
           overflow: 'hidden'
         }}
       >
-        <div style={{
-          fontSize: 'clamp(80px, 20vw, 200px)',
-          opacity: 0.3,
-          animation: 'float 6s ease-in-out infinite'
-        }}>
-          🚀
-        </div>
+        {/* SVG Rocket for better Firefox compatibility */}
+        <svg 
+          width="200" 
+          height="200" 
+          viewBox="0 0 512 512" 
+          style={{
+            opacity: 0.4,
+            animation: 'float 6s ease-in-out infinite',
+            maxWidth: '40vw',
+            maxHeight: '40vh'
+          }}
+        >
+          <defs>
+            <linearGradient id="rocketBody" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style={{stopColor: '#e8e8e8'}} />
+              <stop offset="100%" style={{stopColor: '#a0a0a0'}} />
+            </linearGradient>
+            <linearGradient id="rocketWindow" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style={{stopColor: '#64b5f6'}} />
+              <stop offset="100%" style={{stopColor: '#1976d2'}} />
+            </linearGradient>
+            <linearGradient id="rocketFire" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style={{stopColor: '#ff9800'}} />
+              <stop offset="50%" style={{stopColor: '#f44336'}} />
+              <stop offset="100%" style={{stopColor: '#ff5722'}} />
+            </linearGradient>
+          </defs>
+          {/* Rocket body */}
+          <ellipse cx="256" cy="200" rx="80" ry="160" fill="url(#rocketBody)" />
+          {/* Rocket tip */}
+          <path d="M256 40 L200 120 L312 120 Z" fill="#e53935" />
+          {/* Window */}
+          <circle cx="256" cy="180" r="35" fill="url(#rocketWindow)" />
+          <circle cx="256" cy="180" r="25" fill="#bbdefb" opacity="0.5" />
+          {/* Left fin */}
+          <path d="M176 280 L130 380 L176 340 Z" fill="#e53935" />
+          {/* Right fin */}
+          <path d="M336 280 L382 380 L336 340 Z" fill="#e53935" />
+          {/* Bottom fin */}
+          <ellipse cx="256" cy="360" rx="40" ry="20" fill="#c62828" />
+          {/* Fire/exhaust */}
+          <ellipse cx="256" cy="400" rx="30" ry="60" fill="url(#rocketFire)" opacity="0.9" />
+          <ellipse cx="256" cy="420" rx="20" ry="40" fill="#ffeb3b" opacity="0.8" />
+          {/* Stars decoration */}
+          <circle cx="100" cy="100" r="3" fill="#fff" opacity="0.6" />
+          <circle cx="400" cy="80" r="2" fill="#fff" opacity="0.5" />
+          <circle cx="450" cy="200" r="4" fill="#fff" opacity="0.4" />
+          <circle cx="80" cy="300" r="2" fill="#fff" opacity="0.6" />
+          <circle cx="420" cy="350" r="3" fill="#fff" opacity="0.5" />
+        </svg>
         <style>{`
           @keyframes float {
             0%, 100% { transform: translateY(0px) rotate(-10deg); }

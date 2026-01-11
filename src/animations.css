@@ -258,6 +258,7 @@
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 15vh;
+    position: relative;
   }
   
   .hero-content-wrapper {
@@ -265,19 +266,27 @@
     top: auto !important;
     left: auto !important;
     max-width: 90% !important;
-    margin: 0 auto;
+    margin: 0 auto 2rem auto;
     text-align: center;
     z-index: 10 !important;
   }
   
   .spline {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    z-index: 1 !important;
-    opacity: 0.4;
+    position: relative !important;
+    width: 80% !important;
+    max-width: 300px !important;
+    height: 300px !important;
+    margin: 0 auto 2rem auto !important;
+    z-index: 5 !important;
+    opacity: 0.8 !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    min-height: 300px !important;
+    max-height: 300px !important;
+    min-width: auto !important;
+    max-width: 300px !important;
   }
   
   .hero-flex {
@@ -285,6 +294,14 @@
   }
   
   .hero-cards-wrapper {
+    display: none;
+  }
+  
+  .hero-bg {
+    display: none;
+  }
+  
+  .hero-overlay {
     display: none;
   }
 }
@@ -300,7 +317,10 @@
   }
   
   .spline {
-    opacity: 0.3;
+    max-width: 250px !important;
+    height: 250px !important;
+    min-height: 250px !important;
+    max-height: 250px !important;
   }
 }
 
@@ -311,6 +331,13 @@
   
   .hero-content-wrapper h1 {
     font-size: clamp(28px, 10vw, 48px) !important;
+  }
+  
+  .spline {
+    max-width: 200px !important;
+    height: 200px !important;
+    min-height: 200px !important;
+    max-height: 200px !important;
   }
 }
 
