@@ -1,16 +1,48 @@
-import React, {useEffect, useRef} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 
 /**
  * SpacemanScene - Renders the interactive astronaut/spaceman 3D scene
- * This component is optimized based on Webflow's Spline integration pattern
+ * Optimized for performance with lazy loading and mobile detection
  */
 export default function SpacemanScene({className = 'spline'}){
   const containerRef = useRef(null)
   const appRef = useRef(null)
   const splineRuntimeRef = useRef(null)
+  const [isLoading, setIsLoading] = useState(true)
+  const [isMobile, setIsMobile] = useState(false)
+  const [loadProgress, setLoadProgress] = useState(0)
 
-  // Load and initialize Spline runtime
+  // Detect mobile devices
+  useEffect(() => {
+    const checkMobile = () => {
+      const mobile = window.innerWidth <= 991 || 
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+      setIsMobile(mobile)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
+  // Load and initialize Spline runtime (only on desktop)
   useEffect(()=>{
+    // Skip loading 3D on mobile devices
+    if (isMobile) {
+      setIsLoading(false)
+      return
+    }
+
+    // Simulate initial progress
+    const progressInterval = setInterval(() => {
+      setLoadProgress(prev => {
+        if (prev >= 90) {
+          clearInterval(progressInterval)
+          return prev
+        }
+        return prev + Math.random() * 15
+      })
+    }, 500)
+
     const loadSplineAndRender = async ()=>{
       try {
         // Dynamically import Spline runtime
@@ -37,6 +69,12 @@ export default function SpacemanScene({className = 'spline'}){
         await splineApp.load('https://prod.spline.design/rNxf6T0SBLTAKJDp/scene.splinecode')
         
         appRef.current = splineApp
+        setLoadProgress(100)
+        
+        // Small delay for smooth transition
+        setTimeout(() => {
+          setIsLoading(false)
+        }, 300)
         
         // Dispatch load event (mimics Webflow behavior)
         const loadEvent = new Event('w-spline-load')
@@ -47,33 +85,17 @@ export default function SpacemanScene({className = 'spline'}){
         
       } catch(error) {
         console.error('Spline initialization failed:', error)
-        // Fallback UI
-        if (containerRef.current) {
-          containerRef.current.innerHTML = `
-            <div style="
-              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-              width: 100%;
-              height: 100%;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              color: white;
-              font-family: system-ui;
-              text-align: center;
-              font-size: 16px;
-              gap: 12px;
-            ">
-              <div style="font-size: 32px; animation: bounce 2s infinite;">🚀</div>
-              <div>Spaceman Loading...</div>
-            </div>
-          `
-        }
+        setIsLoading(false)
+        clearInterval(progressInterval)
       }
     }
 
-    loadSplineAndRender()
+    // Delay loading slightly to prioritize critical content
+    const loadTimer = setTimeout(loadSplineAndRender, 100)
 
     return ()=>{
+      clearTimeout(loadTimer)
+      clearInterval(progressInterval)
       // Cleanup on unmount
       if (appRef.current?.dispose) {
         try {
@@ -83,7 +105,7 @@ export default function SpacemanScene({className = 'spline'}){
         }
       }
     }
-  }, [])
+  }, [isMobile])
 
   // Add mouse tracking for parallax effect
   useEffect(()=>{
@@ -138,6 +160,39 @@ export default function SpacemanScene({className = 'spline'}){
     }
   }, [])
 
+  // Mobile fallback - show static image or gradient instead of 3D
+  if (isMobile) {
+    return (
+      <div 
+        className={className}
+        style={{
+          width: '100%',
+          height: '100%',
+          position: 'absolute',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          background: 'radial-gradient(ellipse at center, #1a1a2e 0%, #050505 70%)',
+          overflow: 'hidden'
+        }}
+      >
+        <div style={{
+          fontSize: 'clamp(80px, 20vw, 200px)',
+          opacity: 0.3,
+          animation: 'float 6s ease-in-out infinite'
+        }}>
+          🚀
+        </div>
+        <style>{`
+          @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(-10deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+          }
+        `}</style>
+      </div>
+    )
+  }
+
   return (
     <div
       ref={containerRef}
@@ -159,13 +214,58 @@ export default function SpacemanScene({className = 'spline'}){
         e.currentTarget.style.cursor = 'default'
       }}
     >
+      {/* Loading indicator */}
+      {isLoading && (
+        <div style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '1rem',
+          zIndex: 10
+        }}>
+          <div style={{
+            fontSize: '48px',
+            animation: 'pulse 2s ease-in-out infinite'
+          }}>🚀</div>
+          <div style={{
+            width: '120px',
+            height: '4px',
+            background: '#333',
+            borderRadius: '2px',
+            overflow: 'hidden'
+          }}>
+            <div style={{
+              width: `${loadProgress}%`,
+              height: '100%',
+              background: 'linear-gradient(90deg, #667eea, #764ba2)',
+              borderRadius: '2px',
+              transition: 'width 0.3s ease'
+            }} />
+          </div>
+          <div style={{
+            color: '#666',
+            fontSize: '12px',
+            fontFamily: 'system-ui'
+          }}>Loading 3D Scene...</div>
+          <style>{`
+            @keyframes pulse {
+              0%, 100% { transform: scale(1); opacity: 1; }
+              50% { transform: scale(1.1); opacity: 0.7; }
+            }
+          `}</style>
+        </div>
+      )}
       <canvas
         style={{
           display: 'block',
           width: '100%',
           height: '100%',
-          opacity: 0,
-          animation: 'fadeIn 1.2s ease-out 0.4s forwards'
+          opacity: isLoading ? 0 : 1,
+          transition: 'opacity 0.5s ease-out'
         }}
       />
     </div>

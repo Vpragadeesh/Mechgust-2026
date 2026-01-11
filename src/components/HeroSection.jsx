@@ -8,7 +8,7 @@ export default function HeroSection(){
       <SpacemanScene className="spline" />
       
       {/* Hero content positioned at top-left where spaceman looks */}
-      <div style={{
+      <div className="hero-content-wrapper" style={{
         position: 'absolute',
         top: '12%',
         left: '5%',
