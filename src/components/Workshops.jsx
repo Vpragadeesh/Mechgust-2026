@@ -125,9 +125,14 @@ export default function Workshops() {
                     ))}
                   </ul>
 
-                  <button className="register-btn" onClick={() => alert(`Registered for ${event.label}`)}>
+                  <a 
+                    href="https://forms.google.com/your-workshop-form-link" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="register-btn"
+                  >
                     REGISTER NOW
-                  </button>
+                  </a>
                 </div>
 
                 {/* Right Image */}
