@@ -5,7 +5,6 @@ export default function HeroSection(){
   return (
     <section className="hero-section" style={{ position: 'relative', minHeight: '100vh' }}>
       <div className="hero-bg"></div>
-      <SpacemanScene className="spline" />
       
       {/* Hero content positioned at top-left where spaceman looks */}
       <div className="hero-content-wrapper" style={{
@@ -49,6 +48,9 @@ export default function HeroSection(){
           </div>
         </a>
       </div>
+      
+      {/* Spaceman - placed after content so it appears below on mobile */}
+      <SpacemanScene className="spline" />
       
       {/* Bottom cards */}
       <div style={{

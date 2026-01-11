@@ -166,14 +166,14 @@ export default function SpacemanScene({className = 'spline'}){
       <div 
         className={className}
         style={{
-          width: '100%',
-          height: '100%',
-          position: 'absolute',
+          width: '300px',
+          height: '300px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          background: 'radial-gradient(ellipse at center, #1a1a2e 0%, #050505 70%)',
-          overflow: 'hidden'
+          background: 'radial-gradient(ellipse at center, #1a1a2e 0%, transparent 70%)',
+          overflow: 'visible',
+          margin: '0 auto'
         }}
       >
         {/* SVG Rocket for better Firefox compatibility */}
@@ -182,10 +182,8 @@ export default function SpacemanScene({className = 'spline'}){
           height="200" 
           viewBox="0 0 512 512" 
           style={{
-            opacity: 0.4,
-            animation: 'float 6s ease-in-out infinite',
-            maxWidth: '40vw',
-            maxHeight: '40vh'
+            opacity: 0.9,
+            animation: 'float 6s ease-in-out infinite'
           }}
         >
           <defs>
