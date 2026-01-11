@@ -6,11 +6,6 @@ export default function Navbar(){
 
   const navLinks = [
     { path: '/', label: 'HOME' },
-    { path: '/about', label: 'ABOUT' },
-    { path: '/tech', label: 'TECHNICAL' },
-    { path: '/nontech', label: 'NON-TECH' },
-    { path: '/workshops', label: 'WORKSHOPS' },
-    { path: '/onlineevents', label: 'ONLINE' },
     { path: '/contact', label: 'CONTACT' }
   ]
 
@@ -37,10 +32,10 @@ export default function Navbar(){
           ))}
         </nav>
         <div className="hide-on-mobile">
-          <Link to="/contact" className="button-with-circle-icon w-inline-block">
+          <Link to="/about" className="button-with-circle-icon w-inline-block">
             <div className="button-flex">
-              <p className="button-text">EXPLORE</p>
-              <p className="button-text-absolute">EXPLORE</p>
+              <p className="button-text">ABOUT US</p>
+              <p className="button-text-absolute">ABOUT US</p>
             </div>
             <div className="button-arrow-wrapper">
               <img
