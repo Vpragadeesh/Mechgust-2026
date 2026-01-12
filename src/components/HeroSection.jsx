@@ -65,7 +65,7 @@ export default function HeroSection(){
           <div style={{
             marginTop: '1.5rem',
             display: 'inline-block',
-            padding: '0.75rem 1.5rem',
+            padding: '0.5rem 1rem',
             border: '1px solid rgba(0, 0, 0, 0.08)',
             borderRadius: '12px',
             backgroundColor: '#fff',
