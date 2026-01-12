@@ -44,6 +44,8 @@ export default function HeroSection(){
             src="https://cdn.prod.website-files.com/67021bf42ce586086aea69c0/67024792d09f3730c4f72330_fingerprint.svg"
             className="icon-small"
           />
+
+          
           <h5>Welcome to MECHGUST'26</h5>
         </div>
         

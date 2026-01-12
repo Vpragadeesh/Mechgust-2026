@@ -287,9 +287,10 @@
   /* Mobile spaceman in hero section */
   .mobile-spaceman-hero {
     width: 100%;
-    height: 280px;
+    height: 45vh;
+    min-height: 45vh;
     position: relative;
-    margin: 0 auto;
+    margin: 0 auto 1rem auto;
     z-index: 1;
     order: 1 !important;
   }
@@ -298,6 +299,22 @@
     width: 100%;
     height: 100%;
     position: relative !important;
+  }
+  
+  .hero-content-wrapper {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    max-width: 90% !important;
+    margin: 0 auto 1rem auto;
+    text-align: center;
+    z-index: 10 !important;
+    order: 2 !important;
+    min-height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   .hero-flex {
@@ -341,10 +358,12 @@
   .hero-content-wrapper {
     max-width: 95% !important;
     padding: 0 1rem;
+    min-height: 40vh;
   }
   
   .mobile-spaceman-hero {
-    height: 240px;
+    height: 40vh;
+    min-height: 40vh;
   }
 }
 
@@ -357,8 +376,13 @@
     font-size: clamp(28px, 10vw, 48px) !important;
   }
   
+  .hero-content-wrapper {
+    min-height: 35vh;
+  }
+  
   .mobile-spaceman-hero {
-    height: 200px;
+    height: 35vh;
+    min-height: 35vh;
   }
 }
 
