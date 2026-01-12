@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 
 export default function Footer(){
   return (
-    <footer style={{ background: '#050505', padding: '0', marginTop: '4rem' }}>
+    <footer style={{ background: '#050505', padding: '0', marginTop: '0' }}>
       {/* CTA Section */}
       <section style={{
         textAlign: 'center',
-        padding: '6rem 2rem',
+        padding: 'clamp(3rem, 6vw, 6rem) 2rem',
         borderBottom: '1px solid #1a1a1a'
       }}>
         <p style={{

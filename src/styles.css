@@ -7308,8 +7308,8 @@ blockquote {
     .spline-tab-down {
         z-index: -1;
         opacity: 1;
-        min-height: 53vh;
-        max-height: 53vh;
+        min-height: 30vh;
+        max-height: 30vh;
         display: block;
         position: relative;
     }
@@ -7729,8 +7729,8 @@ blockquote {
         max-height: 8rem;
     }
     .spline-tab-down {
-        min-height: 48vh;
-        max-height: 48vh;
+        min-height: 25vh;
+        max-height: 25vh;
     }
     .about-title-block {
         align-items: center;
@@ -8078,7 +8078,7 @@ blockquote {
         max-height: 2rem;
     }
     .space-8rem {
-        min-height: 4rem;
+        min-height: 2rem;
     }
     .space-4rem {
         min-height: 2rem;
@@ -8226,8 +8226,8 @@ blockquote {
         max-height: 40vw;
     }
     .spline-tab-down {
-        min-height: 27vh;
-        max-height: 27vh;
+        min-height: 18vh;
+        max-height: 18vh;
     }
     .about-title-block {
         grid-column-gap: 16px;

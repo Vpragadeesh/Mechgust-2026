@@ -422,6 +422,12 @@
     width: 12px !important;
     height: 12px !important;
   }
+
+  /* Reduce spacing around spline-tab-down on mobile */
+  .spline-tab-down {
+    margin-top: -2rem !important;
+    margin-bottom: -2rem !important;
+  }
 }
 
 @media screen and (max-width: 768px) {
