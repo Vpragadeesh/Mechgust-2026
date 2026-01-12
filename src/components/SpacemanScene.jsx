@@ -160,74 +160,86 @@ export default function SpacemanScene({className = 'spline'}){
     }
   }, [])
 
-  // Mobile fallback - show static rocket image instead of 3D
+  // Mobile fallback - show gear icon with message
   if (isMobile) {
     return (
       <div 
         className={className}
         style={{
           width: '240px',
-          height: '240px',
+          height: 'auto',
           display: 'flex',
+          flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          background: 'radial-gradient(ellipse at center, #1a1a2e 0%, transparent 70%)',
           overflow: 'visible',
-          margin: '0 auto'
+          margin: '0 auto',
+          padding: '1rem 0'
         }}
       >
-        {/* SVG Rocket for better Firefox compatibility */}
+        {/* SVG Gear Icon */}
         <svg 
-          width="200" 
-          height="200" 
+          width="120" 
+          height="120" 
           viewBox="0 0 512 512" 
           style={{
-            opacity: 0.9,
-            animation: 'float 6s ease-in-out infinite'
+            opacity: 0.8,
+            animation: 'spin 8s linear infinite'
           }}
         >
           <defs>
-            <linearGradient id="rocketBody" x1="0%" y1="0%" x2="100%" y2="100%">
+            <linearGradient id="gearGradient" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" style={{stopColor: '#e8e8e8'}} />
-              <stop offset="100%" style={{stopColor: '#a0a0a0'}} />
-            </linearGradient>
-            <linearGradient id="rocketWindow" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style={{stopColor: '#64b5f6'}} />
-              <stop offset="100%" style={{stopColor: '#1976d2'}} />
-            </linearGradient>
-            <linearGradient id="rocketFire" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" style={{stopColor: '#ff9800'}} />
-              <stop offset="50%" style={{stopColor: '#f44336'}} />
-              <stop offset="100%" style={{stopColor: '#ff5722'}} />
+              <stop offset="100%" style={{stopColor: '#888888'}} />
             </linearGradient>
           </defs>
-          {/* Rocket body */}
-          <ellipse cx="256" cy="200" rx="80" ry="160" fill="url(#rocketBody)" />
-          {/* Rocket tip */}
-          <path d="M256 40 L200 120 L312 120 Z" fill="#e53935" />
-          {/* Window */}
-          <circle cx="256" cy="180" r="35" fill="url(#rocketWindow)" />
-          <circle cx="256" cy="180" r="25" fill="#bbdefb" opacity="0.5" />
-          {/* Left fin */}
-          <path d="M176 280 L130 380 L176 340 Z" fill="#e53935" />
-          {/* Right fin */}
-          <path d="M336 280 L382 380 L336 340 Z" fill="#e53935" />
-          {/* Bottom fin */}
-          <ellipse cx="256" cy="360" rx="40" ry="20" fill="#c62828" />
-          {/* Fire/exhaust */}
-          <ellipse cx="256" cy="400" rx="30" ry="60" fill="url(#rocketFire)" opacity="0.9" />
-          <ellipse cx="256" cy="420" rx="20" ry="40" fill="#ffeb3b" opacity="0.8" />
-          {/* Stars decoration */}
-          <circle cx="100" cy="100" r="3" fill="#fff" opacity="0.6" />
-          <circle cx="400" cy="80" r="2" fill="#fff" opacity="0.5" />
-          <circle cx="450" cy="200" r="4" fill="#fff" opacity="0.4" />
-          <circle cx="80" cy="300" r="2" fill="#fff" opacity="0.6" />
-          <circle cx="420" cy="350" r="3" fill="#fff" opacity="0.5" />
+          {/* Gear teeth */}
+          <path 
+            d="M256 48l-24 48h-48l-24-48h-48l24 48-36 36-48-24v48l48 24v48l-48 24v48l48-24 36 36-24 48h48l24-48h48l24 48h48l-24-48 36-36 48 24v-48l-48-24v-48l48-24v-48l-48 24-36-36 24-48h-48z" 
+            fill="url(#gearGradient)"
+            stroke="#666"
+            strokeWidth="2"
+          />
+          {/* Outer gear ring */}
+          <circle cx="256" cy="256" r="140" fill="none" stroke="url(#gearGradient)" strokeWidth="40" />
+          {/* Gear teeth around the ring */}
+          {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => (
+            <rect 
+              key={i}
+              x="246" 
+              y="80" 
+              width="20" 
+              height="40" 
+              fill="url(#gearGradient)"
+              transform={`rotate(${angle} 256 256)`}
+              rx="4"
+            />
+          ))}
+          {/* Center circle */}
+          <circle cx="256" cy="256" r="60" fill="#1a1a2e" stroke="#666" strokeWidth="3" />
+          {/* Inner detail */}
+          <circle cx="256" cy="256" r="30" fill="none" stroke="#444" strokeWidth="2" />
+          {/* Center dot */}
+          <circle cx="256" cy="256" r="10" fill="#64b5f6" />
         </svg>
+        
+        {/* Message for mobile users */}
+        <p style={{
+          color: '#888',
+          fontSize: '0.75rem',
+          textAlign: 'center',
+          marginTop: '1rem',
+          padding: '0 1rem',
+          lineHeight: '1.5',
+          maxWidth: '280px'
+        }}>
+          ✨ To see more animations, visit this webpage on desktop
+        </p>
+        
         <style>{`
-          @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(-10deg); }
-            50% { transform: translateY(-20px) rotate(10deg); }
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
           }
         `}</style>
       </div>
