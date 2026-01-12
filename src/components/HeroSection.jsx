@@ -29,52 +29,58 @@ export default function HeroSection(){
         </div>
       )}
       
-      {/* Hero content positioned at top-left where spaceman looks */}
-      <div className="hero-content-wrapper" style={{
-        position: 'absolute',
-        top: '12%',
-        left: '5%',
-        zIndex: 2,
-        maxWidth: '60%'
-      }}>
-        
-        <div className="hero-subheading-flex">
-          <img
-            alt="fingerprint"
-            src="https://cdn.prod.website-files.com/67021bf42ce586086aea69c0/67024792d09f3730c4f72330_fingerprint.svg"
-            className="icon-small"
-          />
-
+        <div className="hero-content-wrapper" style={{
+          position: 'absolute',
+          top: '12%',
+          left: '5%',
+          zIndex: 2,
+          maxWidth: '60%'
+        }}>
           
-          <h5>Welcome to MECHGUST'26</h5>
+          <div className="hero-subheading-flex">
+            <img
+          alt="fingerprint"
+          src="https://cdn.prod.website-files.com/67021bf42ce586086aea69c0/67024792d09f3730c4f72330_fingerprint.svg"
+          className="icon-small"
+            />
+
+            
+            <h5>Welcome to MECHGUST'26</h5>
+          </div>
+          
+          <h1 style={{
+            fontSize: 'clamp(40px, 8vw, 120px)',
+            fontWeight: '800',
+            color: '#fff',
+            letterSpacing: '-0.02em',
+            lineHeight: '0.9',
+            textTransform: 'uppercase',
+            margin: '0.5rem 0'
+          }}>THE SILVER  ERA</h1>
+          
+          <p className="max-width-25vw" style={{ color: '#888', marginTop: '1rem' }}>
+            From Concept to Creation — Beautiful design has the power to captivate audiences.
+          </p>
+          
+          <div style={{
+            marginTop: '1.5rem',
+            display: 'inline-block',
+            padding: '0.75rem 1.5rem',
+            border: '1px solid rgba(0, 0, 0, 0.08)',
+            borderRadius: '12px',
+            backgroundColor: '#fff',
+            backdropFilter: 'blur(10px)'
+          }}>
+            <span style={{
+          color: '#000',
+          fontSize: '1.1rem',
+          fontWeight: '600',
+          letterSpacing: '0.05em'
+            }}>📅 Feb 3</span>
+          </div>
         </div>
         
-        <h1 style={{
-          fontSize: 'clamp(40px, 8vw, 120px)',
-          fontWeight: '800',
-          color: '#fff',
-          letterSpacing: '-0.02em',
-          lineHeight: '0.9',
-          textTransform: 'uppercase',
-          margin: '0.5rem 0'
-        }}>THE SILVER  ERA</h1>
-        
-        <p className="max-width-25vw" style={{ color: '#888', marginTop: '1rem' }}>
-          From Concept to Creation — Beautiful design has the power to captivate audiences.
-        </p>
-        
-        <a href="#learn-more" className="arrow-border-wrapper w-inline-block" style={{ marginTop: '1.5rem' }}>
-          <div className="icon-wrapper-small">
-            <img
-              alt="icon"
-              src="https://cdn.prod.website-files.com/67021bf42ce586086aea69c0/670242c3a96327a0b710be85_Icon.svg"
-              className="button-icon"
-            />
-          </div>
-        </a>
-      </div>
-      
-      {/* Spaceman - placed after content so it appears below on mobile */}
+        {/* Spaceman - placed after content so it appears below on mobile */}
       <SpacemanScene className="spline" />
       
       {/* Bottom cards */}
