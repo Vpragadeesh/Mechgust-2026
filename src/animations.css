@@ -287,8 +287,8 @@
   /* Mobile spaceman in hero section */
   .mobile-spaceman-hero {
     width: 100%;
-    height: 45vh;
-    min-height: 45vh;
+    height:     47vh;
+    min-height: 47vh;
     position: relative;
     margin: 0 auto 1rem auto;
     z-index: 1;
@@ -376,13 +376,8 @@
     font-size: clamp(28px, 10vw, 48px) !important;
   }
   
-  .hero-content-wrapper {
-    min-height: 35vh;
-  }
-  
   .mobile-spaceman-hero {
-    height: 35vh;
-    min-height: 35vh;
+    height: 200px;
   }
 }
 
