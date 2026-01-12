@@ -6,6 +6,7 @@ export default function Navbar(){
 
   const navLinks = [
     { path: '/', label: 'HOME' },
+    {path: '/about', label: 'ABOUT' },
     { path: '/contact', label: 'CONTACT' }
   ]
 
@@ -31,21 +32,6 @@ export default function Navbar(){
             </div>
           ))}
         </nav>
-        <div className="hide-on-mobile">
-          <Link to="/about" className="button-with-circle-icon w-inline-block">
-            <div className="button-flex">
-              <p className="button-text">ABOUT US</p>
-              <p className="button-text-absolute">ABOUT US</p>
-            </div>
-            <div className="button-arrow-wrapper">
-              <img
-                alt=""
-                src="https://cdn.prod.website-files.com/67021bf42ce586086aea69c0/67021bf42ce586086aea6af8_arrow_outward.svg"
-                className="button-icon"
-              />
-            </div>
-          </Link>
-        </div>
       </div>
     </nav>
   )
