@@ -1,10 +1,33 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import SpacemanScene from './SpacemanScene'
+import SplineObject from './SplineObject'
 
 export default function HeroSection(){
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 991);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+  
   return (
     <section className="hero-section" style={{ position: 'relative', minHeight: '100vh' }}>
       <div className="hero-bg"></div>
+      
+      {/* 3D Spaceman for mobile - appears at top */}
+      {isMobile && (
+        <div className="mobile-spaceman-hero">
+          <SplineObject
+            splineUrl="https://prod.spline.design/J6fFldz3YOndaynA/scene.splinecode"
+            animationType="spline"
+            className="hero-spaceman-mobile"
+          />
+        </div>
+      )}
       
       {/* Hero content positioned at top-left where spaceman looks */}
       <div className="hero-content-wrapper" style={{
