@@ -75,16 +75,16 @@ export default function Onlineevents() {
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
     ],
     events: [
-      { letter: 'A', label: 'IPL AUCTION',          image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-ipl-auction' },
-      { letter: 'B', label: 'CONNECTIONS',          image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-connections' },
-      { letter: 'C', label: 'GRAB A MINUTE',        image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-grab-a-minute' },
-      { letter: 'D', label: 'GUESS THE LYRICS',     image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-guess-lyrics' },
-      { letter: 'E', label: 'PICTO SCAVENGER HUNT', image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-scavenger-hunt' },
-      { letter: 'F', label: 'GUESS THE LYRICS',     image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-guess-lyrics-2' },
-      { letter: 'G', label: 'POSTER DESIGN',        image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-poster-design' },
-      { letter: 'H', label: 'TREASURE HUNT',        image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-treasure-hunt' },
-      { letter: 'I', label: 'SQUID GAME RELAY',     image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-squid-game' },
-      { letter: 'J', label: 'SCRIBBLE',             image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-scribble' }
+      { letter: 'A', label: 'IPL AUCTION',          image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-ipl-auction', price: '₹100' },
+      { letter: 'B', label: 'CONNECTIONS',          image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-connections', price: '₹100' },
+      { letter: 'C', label: 'GRAB A MINUTE',        image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-grab-a-minute', price: '₹100' },
+      { letter: 'D', label: 'GUESS THE LYRICS',     image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-guess-lyrics', price: '₹100' },
+      { letter: 'E', label: 'PICTO SCAVENGER HUNT', image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-scavenger-hunt', price: '₹100' },
+      { letter: 'F', label: 'GUESS THE LYRICS',     image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-guess-lyrics-2', price: '₹100' },
+      { letter: 'G', label: 'POSTER DESIGN',        image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-poster-design', price: '₹100' },
+      { letter: 'H', label: 'TREASURE HUNT',        image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-treasure-hunt', price: '₹100' },
+      { letter: 'I', label: 'SQUID GAME RELAY',     image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-squid-game', price: '₹100' },
+      { letter: 'J', label: 'SCRIBBLE',             image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-scribble', price: '₹100' }
     ]
   }
 
@@ -125,14 +125,17 @@ export default function Onlineevents() {
                     ))}
                   </ul>
 
-                  <a 
-                    href={event.formLink} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="register-btn"
-                  >
-                    REGISTER NOW
-                  </a>
+                  <div className="event-footer">
+                    <div className="event-price">{event.price}</div>
+                    <a 
+                      href={event.formLink} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="register-btn"
+                    >
+                      REGISTER NOW
+                    </a>
+                  </div>
                 </div>
 
                 {/* Right Image */}

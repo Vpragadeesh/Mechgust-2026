@@ -414,8 +414,27 @@
 }
 
 /* ============================================
-   REGISTER BUTTON
+   REGISTER BUTTON & EVENT FOOTER
    ============================================ */
+
+.event-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.event-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  white-space: nowrap;
+}
 
 .register-btn {
   background: transparent;
@@ -431,6 +450,8 @@
   position: relative;
   overflow: hidden;
   text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .register-btn:hover {
@@ -453,6 +474,17 @@
 }
 
 @media (max-width: 768px) {
+  .event-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .event-price {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+
   .register-btn {
     padding: 10px 32px;
     font-size: 11px;
