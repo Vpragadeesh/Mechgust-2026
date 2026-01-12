@@ -166,8 +166,8 @@ export default function SpacemanScene({className = 'spline'}){
       <div 
         className={className}
         style={{
-          width: '300px',
-          height: '300px',
+          width: '240px',
+          height: '240px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
