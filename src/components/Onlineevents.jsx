@@ -113,9 +113,20 @@ export default function Onlineevents() {
                 data-aos-delay={`${i * 50}`}
                 data-aos-duration="800"
               >
-                {/* Left Content */}
+                {/* Left Image */}
+                <div className="event-image-wrapper">
+                  <img
+                    src={event.image}
+                    alt={event.label}
+                    className="event-image"
+                    loading="lazy"
+                  />
+                  <div className="image-overlay" />
+                </div>
+
+                {/* Right Content */}
                 <div className="event-content">
-                  <h3 className="event-section-title">DESCRIPTION</h3>
+                  <h3 className="event-section-title">{event.label}</h3>
                   <p className="event-description">{event.description}</p>
 
                   <h3 className="event-section-title">RULES</h3>
@@ -136,17 +147,6 @@ export default function Onlineevents() {
                       REGISTER NOW
                     </a>
                   </div>
-                </div>
-
-                {/* Right Image */}
-                <div className="event-image-wrapper">
-                  <img
-                    src={event.image}
-                    alt={event.label}
-                    className="event-image"
-                    loading="lazy"
-                  />
-                  <div className="image-overlay" />
                 </div>
               </div>
             ))}
