@@ -57,6 +57,12 @@ export default function Workshops() {
       })
     }
   }, [])
+
+
+
+
+
+  
   const work = {
     title: 'WORKSHOPS',
     category: 'Marketing',
@@ -74,17 +80,108 @@ export default function Workshops() {
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
     ],
+
+
+
+
+
+
+    
     events: [
-      { letter: 'A', label: 'IPL AUCTION',          image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/workshop-ipl-auction', price: '₹100' },
-      { letter: 'B', label: 'CONNECTIONS',          image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/workshop-connections', price: '₹100' },
-      { letter: 'C', label: 'GRAB A MINUTE',        image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/workshop-grab-a-minute', price: '₹100' },
-      { letter: 'D', label: 'GUESS THE LYRICS',     image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/workshop-guess-lyrics', price: '₹100' },
-      { letter: 'E', label: 'PICTO SCAVENGER HUNT', image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/workshop-scavenger-hunt', price: '₹100' },
-      { letter: 'F', label: 'GUESS THE LYRICS',     image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/workshop-guess-lyrics-2', price: '₹100' },
-      { letter: 'G', label: 'POSTER DESIGN',        image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/workshop-poster-design', price: '₹100' },
-      { letter: 'H', label: 'TREASURE HUNT',        image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/workshop-treasure-hunt', price: '₹100' },
-      { letter: 'I', label: 'SQUID GAME RELAY',     image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/workshop-squid-game', price: '₹100' },
-      { letter: 'J', label: 'SCRIBBLE',             image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/workshop-scribble', price: '₹100' }
+      { letter: 'A', label: ' AEROMODELING',          image: 'events/image.jpg', description: 'This workshop introduces participants to core aerodynamics concepts along with practical RC aircraft building experience, emphasizing hands-on training, teamwork, and disciplined participation.', rules: ['Participants must register and pay a Rs.150 fee before the workshop.',
+'Participation certificates will be provided to eligible attendees.',
+'All participants must follow the host institution’s rules.',
+'The workshop includes aerodynamics basics and hands-on RC aircraft building.',
+'Materials are provided, with motors and electronics for temporary use only.',
+'Misconduct or misuse of equipment will result in dismissal.'], formLink: 'https://forms.gle/5LBKRg8W9vwJPUJM6', price: 'Entry Fee ₹150' },
+
+
+
+
+
+
+
+
+      { letter: 'B', label: '3D PRINTING',          image: 'events/image.jpg', description: 'This workshop provides a well-organized learning experience with defined guidelines, emphasizing discipline, responsible behavior, and effective hands-on engagement.', rules: ['Participants must register online or on-spot and complete payment before the workshop.',
+'Punctuality is mandatory and late entries may not be allowed.',
+'All institutional rules and regulations must be strictly followed.',
+'Official certificates will be issued upon successful completion.',
+'Participants must handle equipment carefully and are responsible for any damage.',
+'Unethical behavior, unauthorized recording, or rule violations will result in dismissal.'], formLink: 'https://forms.gle/5LBKRg8W9vwJPUJM6', price: 'Entry Fee ₹150' },
+
+
+
+
+
+
+
+
+      { letter: 'C', label: 'CNC',        image: 'events/image.jpg', description: 'This workshop emphasizes practical training with strict safety and discipline standards, with limited seats to ensure focused learning and effective skill development.', rules: ['Students must register online or on-spot to attend.',
+'Rs.100 payment is required before the event.',
+'Participation certificates will be provided.',
+'Institutional rules must be strictly followed.',
+'Hands-on training requires careful equipment handling and safety gear.',
+'Unethical behavior leads to dismissal; seats are first-come, first-served.'], formLink: 'https://forms.gle/5LBKRg8W9vwJPUJM6', price: 'Entry Fee ₹150' },
+
+
+
+
+
+
+
+
+
+      { letter: 'D', label: 'VEHICLE BUILDING',     image: 'events/image.jpg', description: 'This workshop is organized with clear registration guidelines to ensure seamless participation, while emphasizing professionalism and strict adherence to safety standards throughout the event.', rules: ['Prior registration is mandatory for all participants.',
+'Registration can be done online or on-spot before 9:00 AM.',
+'Re-entry is not allowed once participants leave the venue.',
+'The entry fee is strictly non-refundable.',
+'All participants must maintain professionalism and follow safety rules during the workshop.'], formLink: 'https://forms.gle/5LBKRg8W9vwJPUJM6', price: 'Entry Fee ₹150' },
+
+
+
+
+
+
+      { letter: 'E', label: 'ROBOTICS', image: 'events/image.jpg', description: 'This workshop requires prior registration and follows clear participation guidelines to ensure smooth conduct, while emphasizing professionalism and strict safety compliance throughout the event.', rules: ['Prior registration is required for all participants.',
+'Registration is available online or on-spot before 9:00 AM.',
+'Re-entry is not permitted once a participant leaves the venue.',
+'The entry fee is strictly non-refundable.',
+'All participants must maintain professionalism and follow safety rules during the workshop.'], formLink: 'https://forms.gle/5LBKRg8W9vwJPUJM6', price: 'Entry Fee ₹150' },
+
+
+
+
+
+      { letter: 'F', label: 'DRONE',     image: 'events/image.jpg', description: 'This workshop is conducted with clear registration and entry rules to ensure smooth participation, while emphasizing professionalism and strict adherence to safety standards throughout the event.', rules: ['Prior registration is mandatory for all participants.',
+'Participants may register online or on-spot before 9:00 AM.',
+'Re-entry is not allowed once participants leave the venue.',
+'The entry fee is non-refundable.',
+'All participants must maintain professionalism and strictly follow safety rules during the workshop.'], formLink: 'https://forms.gle/5LBKRg8W9vwJPUJM6', price: 'Entry Fee ₹150' },
+
+
+
+
+
+      { letter: 'G', label: 'ENTREPRENEURSHIP',        image: 'events/image.jpg', description: 'Entrepreneurship encourages innovation and business skills to turn ideas into successful ventures through creativity and strategic thinking.', rules: ['Prior registration is mandatory for all participants.',
+'Participants may register online or on-spot before 9:00 AM.',
+'Re-entry is not allowed once participants leave the venue.',
+'The entry fee is non-refundable.',
+'All participants must maintain professionalism and strictly follow safety rules during the workshop.'], formLink: 'https://forms.gle/5LBKRg8W9vwJPUJM6', price: 'Entry Fee ₹150' },
+
+
+
+
+
+      { letter: 'H', label: 'FRONIUS',        image: 'events/image.jpg', description: 'Welding Technology (Fronius) introduces advanced welding techniques and modern equipment, focusing on precision, safety, and industry-standard practices for high-quality fabrication.', rules: ['Prior registration is mandatory for all participants.',
+'Participants may register online or on-spot before 9:00 AM.',
+'Re-entry is not allowed once participants leave the venue.',
+'The entry fee is non-refundable.',
+'All participants must maintain professionalism and strictly follow safety rules during the workshop.'], formLink: 'https://forms.gle/5LBKRg8W9vwJPUJM6', price: 'Entry Fee ₹150' },
+
+
+
+
+
     ]
   }
 
@@ -98,7 +195,20 @@ export default function Workshops() {
 
       <section className="events-section">
         <div className="w-layout-blockcontainer container w-container">
+          
           <h2 className="events-title">{work.title} EVENTS</h2>
+
+<p className="max-width-25vw" style={{ color: '#888', marginTop: '0.5rem' ,}}>
+  Scroll down to see all the events
+</p>
+
+
+
+
+
+
+
+
 
           <div className="events-grid">
             {work.events.map((event, i) => (

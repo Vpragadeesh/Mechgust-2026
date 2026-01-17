@@ -5611,8 +5611,8 @@ blockquote {
     display: flex;
 }
 
-.metrics-text {
-    font-size: 4vw;
+.metrics-text {                   /*For laptop*/
+    font-size: 7vw;
     font-weight: 200;
     line-height: 8.611vw;
 }
@@ -7212,7 +7212,7 @@ blockquote {
         grid-auto-columns: 1fr;
     }
     .metrics-text {
-        font-size: 7rem;
+        font-size: 4.5rem;    /*For phone*/
         line-height: 7rem;
     }
     .metrics-text-block {

@@ -4,39 +4,46 @@ import './WorkDetail.css'
 export default function About() {
   const navigate = useNavigate()
 
+
+
   const teamMembers = [
     {
-      name: 'Dr. John Smith',
-      role: 'FACULTY COORDINATOR',
-      email: 'john@mech.edu',
+      name: 'LEARN ',
+      role: '',
+      email: '',
       image: 'https://cdn.prod.website-files.com/67021bf42ce586086aea69c0/67021bf42ce586086aea69fc_Team3.jpg'
     },
     {
-      name: 'Priya Kumar',
-      role: 'STUDENT COORDINATOR',
-      email: 'priya@mech.edu',
+      name: 'COMPLETE',
+      role: '',
+      email: '',
       image: 'https://cdn.prod.website-files.com/67021bf42ce586086aea69c0/67021bf42ce586086aea6a3c_Team2.jpg'
     },
     {
-      name: 'Rahul Dev',
-      role: 'TECH LEAD',
-      email: 'rahul@mech.edu',
+      name: 'CONNECT & WIN',
+      role: '',
+      email: '',
       image: 'https://cdn.prod.website-files.com/67021bf42ce586086aea69c0/67021bf42ce586086aea6a3e_Team1.jpg'
     }
+
+    
   ]
 
+
+  
+
   const timelineData = [
-    { year: '2001', label: 'FOUNDED', desc: 'Department of Mechanical Engineering established with a vision to create future innovators.' },
-    { year: '2015', label: 'FIRST SYMPOSIUM', desc: 'MECHGUST was born as a small departmental event with just 200 participants.' },
-    { year: '2023', label: '2K+ PARTICIPANTS', desc: 'Grew into one of the largest technical symposiums in the region.' },
-    { year: '2026', label: 'SILVER ERA', desc: 'Celebrating 25 years of excellence with our biggest edition yet.' }
+    { year: '2022', label: 'SYMPOSIUM', desc: 'Launch of MECHGUST as a departmental technical symposium Focused on core mechanical engineering events Encouraged student participation and technical learning' },
+    { year: '2023', label: 'NEW ', desc: 'Increased participation from multiple colleges Introduction of new technical and non-technical events' },
+    { year: '2024', label: '2.5K+ PARTICIPANTS', desc: 'Expansion of events including workshops and project presentations,Improved event organization and outreach.' },
+    { year: '2025', label: 'MASSIVE SUCCESS', desc: 'Added industry-oriented sessions and advanced competitions Wider participation across regions' }
   ]
 
   const skills = [
-    { name: 'TECHNICAL EVENTS', percent: 85 },
-    { name: 'WORKSHOPS', percent: 90 },
-    { name: 'INNOVATION', percent: 75 },
-    { name: 'STUDENT ENGAGEMENT', percent: 95 }
+    { name: 'TECH EVENTS', percent: 95 },
+    { name: 'HANDS ON WORKSHOPS', percent: 92 },
+    { name: 'IDEAS & INNOVATION', percent: 83 },
+    { name: 'FUN & PARTICIPATION', percent: 100 }
   ]
 
   return (
@@ -63,7 +70,7 @@ export default function About() {
             {/* Left - Title */}
             <div>
               <h1 style={{
-                fontSize: 'clamp(4rem, 12vw, 10rem)',
+                fontSize: 'clamp(1rem, 9vw, 7rem)',
                 fontWeight: '700',
                 color: '#fff',
                 lineHeight: '0.95',
@@ -86,42 +93,9 @@ export default function About() {
               </div>
             </div>
             
-            {/* Right - Avatars & Tagline */}
-            <div style={{ textAlign: 'right' }}>
-              <div style={{ 
-                display: 'flex', 
-                justifyContent: 'flex-end',
-                marginBottom: '2rem'
-              }}>
-                {teamMembers.map((member, i) => (
-                  <div key={i} style={{
-                    width: '70px',
-                    height: '70px',
-                    borderRadius: '50%',
-                    border: '3px solid #050505',
-                    overflow: 'hidden',
-                    marginLeft: i > 0 ? '-20px' : 0
-                  }}>
-                    <img 
-                      src={member.image} 
-                      alt={member.name}
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                    />
-                  </div>
-                ))}
-              </div>
-              <p style={{
-                color: '#888',
-                fontSize: '0.85rem',
-                letterSpacing: '0.15em',
-                lineHeight: '1.8',
-                textTransform: 'uppercase'
-              }}>
-                WE TRANSFORM<br/>
-                YOUR IDEAS INTO<br/>
-                STUNNING EXPERIENCES.
-              </p>
-            </div>
+           
+               
+                  
           </div>
 
           {/* Folder Cards */}
@@ -186,11 +160,39 @@ export default function About() {
               justifyContent: 'center'
             }}>
               <img 
-                src="https://cdn.prod.website-files.com/67021bf42ce586086aea69c0/670229a75f4844ac9d8daa0a_Services-p-500.jpg"
+                src="events/download.png"
                 alt="Symposium"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
             </div>
+
+
+<div style={{
+              background: '#f5f5f5',
+              borderRadius: '20px',
+              width: '200px',
+              height: '180px',
+              overflow: 'hidden',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}>
+              <img 
+                src="events/loogosample.neww (3)-Photoroom.png"
+                alt="Symposium"
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
+            </div>
+
+
+
+
+
+
+
+
+
+
 
             {/* Card 3 - Satisfaction */}
             <div style={{
@@ -243,7 +245,7 @@ export default function About() {
               alignItems: 'center',
               gap: '0.5rem'
             }}>
-              <span style={{ opacity: 0.5 }}>◎</span> WELCOME
+              <span style={{ opacity: 0.5 }}>◎</span> About our Institution
             </p>
             <h2 style={{
               fontSize: 'clamp(2.5rem, 5vw, 4rem)',
@@ -251,7 +253,7 @@ export default function About() {
               color: '#fff',
               margin: '0 0 1.5rem 0',
               fontStyle: 'italic'
-            }}>Our Timeline</h2>
+            }}>Chennai institute of technology</h2>
             <p style={{
               color: '#666',
               fontSize: '1rem',
@@ -259,10 +261,21 @@ export default function About() {
               maxWidth: '400px',
               marginBottom: '2rem'
             }}>
-              Established in 2001, our department emerged from a collective passion for engineering, innovation, and the boundless potential of mechanical systems.
-            </p>
+<p>
+Chennai Institute of Technology (CIT) is a premier engineering institution committed to excellence in technical education, innovation, and research. Established with a strong vision to nurture skilled and responsible engineers, CIT offers a dynamic learning environment that seamlessly blends academic knowledge with hands-on practical exposure. The institution emphasizes conceptual clarity, critical thinking, and technical competence, preparing students to meet the evolving demands of the engineering industry.
+</p>
+
+<p>
+With a strong focus on industry-oriented learning, state-of-the-art infrastructure, and experienced faculty members, CIT encourages students to think creatively and solve real-world problems. The institute actively promotes innovation through technical events, national-level symposiums, workshops, and hands-on initiatives such as MECHGUST, providing students with opportunities to explore emerging technologies, collaborate with peers, and develop future-ready skills. Through these initiatives, CIT empowers students to innovate, lead, and contribute meaningfully to the future of engineering.
+</p>
+
+
+
+           </p>
+
+
             <Link 
-              to="/"
+              to="https://www.citchennai.edu.in/"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -292,7 +305,80 @@ export default function About() {
                 </svg>
               </span>
             </Link>
+
+
+
+
+            <p style={{
+              color: '#666',
+              position:'relative',
+              top: '10%',
+              fontSize: '0.8rem',
+              letterSpacing: '0.2em',
+              marginBottom: '1rem',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem'
+            }}>
+              <span style={{ opacity: 0.5 }}>◎</span> About our Symposium
+            </p>
+
+            <h2 style={{
+              fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+              fontWeight: '400',
+              color: '#fff',
+              margin: '0 0 1.5rem 0',
+              fontStyle: 'italic'
+            }}>Mechgust</h2>
           </div>
+
+          <p style={{
+              color: '#666',
+              fontSize: '1rem',
+              lineHeight: '1.8',
+              maxWidth: '400px',
+              marginBottom: '2rem'
+            }}>          
+            <p>
+MECHGUST is the annual national-level technical symposium organized by the Department of Mechanical Engineering, Chennai Institute of Technology. Designed to bring together passionate students and innovative minds, MECHGUST provides a platform to explore mechanical engineering beyond classroom learning. The symposium focuses on encouraging creativity, technical excellence, and problem-solving through a wide range of competitive events and activities.
+</p>
+
+<p>
+Centered around the theme <strong>“The Silver Era,”</strong> MECHGUST represents the age of smart machines, automation, and advanced engineering technologies. Through technical events, hands-on workshops, and interactive challenges, the symposium offers students real-world exposure and practical experience. MECHGUST inspires participants to collaborate, innovate, and develop future-ready skills while enjoying a vibrant and engaging fest atmosphere.
+</p>
+
+            
+              </p> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
           {/* Right - Timeline Cards */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -329,7 +415,7 @@ export default function About() {
       {/* Stats Section */}
       <section style={{ padding: '6rem 5%', borderTop: '1px solid #1a1a1a' }}>
         <div style={{ 
-          maxWidth: '1400px', 
+          maxWidth: '1200px', 
           margin: '0 auto',
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
@@ -350,9 +436,9 @@ export default function About() {
           </div>
           <div>
             <p style={{ color: '#666', fontSize: '0.75rem', letterSpacing: '0.2em', marginBottom: '1rem' }}>
-              <span style={{ opacity: 0.5 }}>✦</span> YEARS
+              <span style={{ opacity: 0.5 }}>✦</span> PRIZES
             </p>
-            <h2 style={{ fontSize: 'clamp(4rem, 10vw, 8rem)', fontWeight: '700', color: '#fff', margin: 0 }}>25</h2>
+            <h2 style={{ fontSize: 'clamp(4rem, 10vw, 8rem)', fontWeight: '700', color: '#fff', margin: 0 }}>20K+</h2>
           </div>
         </div>
       </section>
@@ -362,7 +448,7 @@ export default function About() {
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <p style={{
             color: '#666',
-            fontSize: '0.8rem',
+            fontSize: '1.8rem',
             letterSpacing: '0.2em',
             marginBottom: '2rem',
             display: 'flex',
@@ -373,20 +459,24 @@ export default function About() {
             <span>✦</span> OUR VISION
           </p>
           <h2 style={{
-            fontSize: 'clamp(1.8rem, 4vw, 3.5rem)',
+            fontSize: 'clamp(1.5rem, 3vw, 2.5rem)',
             fontWeight: '400',
             lineHeight: '1.4',
             margin: 0
           }}>
-            <span style={{ color: '#fff' }}>We Aspire To </span>
-            <span style={{ color: '#444' }}>Be A Driving Force Behind A Future </span>
-            <span style={{ color: '#fff' }}>Where Innovation </span>
-            <span style={{ color: '#444' }}>Is A Powerful Catalyst For Positive Change.</span>
+            <span style={{ color: '#fff' }}>We Aspire To Be A Hub Of </span>
+            <span style={{ color: '#444' }}>Innovation And Excellence, </span>
+            <span style={{ color: '#fff' }}>Where Mechanical Minds  </span>
+            <span style={{ color: '#444' }}> Unite To Create, Compete, And Collaborate—
+Shaping Future Engineers
+And Driving Meaningful Change Through Technology.</span>
           </h2>
         </div>
       </section>
 
-      {/* Team Section */}
+
+
+{/* Team Section */}
       <section style={{ padding: '6rem 5%' }}>
         <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
@@ -395,14 +485,14 @@ export default function About() {
               fontSize: '0.8rem',
               letterSpacing: '0.2em',
               marginBottom: '1rem'
-            }}>GET TO KNOW US</p>
+            }}>WHY</p>
             <h2 style={{
               fontSize: 'clamp(3rem, 8vw, 6rem)',
               fontWeight: '400',
               margin: 0
             }}>
-              <span style={{ color: '#fff', fontStyle: 'italic' }}>The </span>
-              <span style={{ color: '#444' }}>Team</span>
+              <span style={{ color: '#fff', fontStyle: 'italic' }}>MECHGUST </span>
+              <span style={{ color: '#444' }}>26</span>
             </h2>
             <p style={{
               color: '#666',
@@ -412,7 +502,7 @@ export default function About() {
               marginLeft: 'auto',
               marginRight: 'auto'
             }}>
-              Our team of talented coordinators and volunteers bring expertise and creativity to every event.
+              From classroom knowledge to real-world skills.
             </p>
           </div>
 
@@ -488,48 +578,19 @@ export default function About() {
       </section>
 
       {/* Testimonial Section */}
-      <section style={{ padding: '6rem 5%' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
-            <span style={{
-              fontSize: '6rem',
-              color: 'transparent',
-              WebkitTextStroke: '1px #444',
-              lineHeight: 0.8
-            }}>"</span>
-            <div>
-              <p style={{
-                fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
-                fontWeight: '400',
-                fontStyle: 'italic',
-                color: '#fff',
-                lineHeight: '1.5',
-                marginBottom: '2rem'
-              }}>
-                I was blown away by the creativity and innovation at MECHGUST. The events were well-organized and the experience was unforgettable.
-              </p>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <div style={{
-                  width: '50px',
-                  height: '50px',
-                  borderRadius: '50%',
-                  overflow: 'hidden'
-                }}>
-                  <img 
-                    src="https://cdn.prod.website-files.com/67021bf42ce586086aea69c0/67021bf42ce586086aea6a3c_Team2.jpg"
-                    alt="Testimonial"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                  />
-                </div>
-                <div>
-                  <p style={{ color: '#fff', fontSize: '0.85rem', fontWeight: '600', letterSpacing: '0.1em' }}>SARAH WINTER</p>
-                  <p style={{ color: '#666', fontSize: '0.75rem', letterSpacing: '0.1em' }}>PARTICIPANT 2023</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
+
+
+
+
+
+
+
+
+
+
+      
+      
 
       {/* Skills Section */}
       <section style={{ padding: '6rem 5%' }}>
@@ -544,8 +605,8 @@ export default function About() {
           {/* Left - Skills */}
           <div>
             <div style={{ marginBottom: '3rem' }}>
-              <span style={{ color: '#666', fontSize: '0.8rem', letterSpacing: '0.2em' }}>OUR </span>
-              <span style={{ color: '#fff', fontSize: '2.5rem', fontWeight: '700' }}>SKILLS</span>
+              <span style={{ color: '#666', fontSize: '0.8rem', letterSpacing: '0.2em' }}>WHY </span>
+              <span style={{ color: '#fff', fontSize: '2.5rem', fontWeight: '700' }}>MECHGUST ROCKS</span>
             </div>
             
             {skills.map((skill, i) => (

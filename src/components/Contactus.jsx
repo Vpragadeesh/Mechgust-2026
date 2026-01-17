@@ -206,7 +206,7 @@ export default function Contactus() {
                     marginBottom: '0.25rem',
                     textTransform: 'uppercase'
                   }}>EMAIL</p>
-                  <p style={{ color: '#f5f5f5', fontSize: '1rem', margin: 0 }}>mechgust26@mech.edu</p>
+                  <p style={{ color: '#f5f5f5', fontSize: '1rem', margin: 0 }}>mechgust@citchennai.net</p>
                 </div>
               </div>
               
@@ -245,8 +245,8 @@ export default function Contactus() {
                   }}>LOCATION</p>
                   <p style={{ color: '#f5f5f5', fontSize: '1rem', margin: 0, lineHeight: 1.4 }}>
                     Department of Mechanical Engineering<br/>
-                    College Campus, Main Building
-                  </p>
+                    Chennai instsitute of technology(CIT)  <br/>
+                    Kundrathur,Chennai,600069.               </p>
                 </div>
               </div>
               

@@ -14,7 +14,7 @@ export default function Navbar(){
     <nav className="navbar w-nav" role="banner">
       <Link to="/" className="logo-link-wrapper w-nav-brand">
         <img
-          src="https://cdn.prod.website-files.com/67021bf42ce586086aea69c0/6703898cb9ed6a04ab83c37b_panorama_photosphere.svg"
+                                                                       src="events/vit.jpg"
           alt="logo"
           className="logo"
         />

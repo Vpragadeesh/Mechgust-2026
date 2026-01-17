@@ -31,7 +31,7 @@ export default function HeroSection(){
       
         <div className="hero-content-wrapper" style={{
           position: 'absolute',
-          top: '12%',
+          top: '14%',
           left: '5%',
           zIndex: 2,
           maxWidth: '60%'
@@ -49,17 +49,17 @@ export default function HeroSection(){
           </div>
           
           <h1 style={{
-            fontSize: 'clamp(40px, 8vw, 120px)',
+            fontSize: 'clamp(20px, 6vw, 100px)',
             fontWeight: '800',
             color: '#fff',
             letterSpacing: '-0.02em',
             lineHeight: '0.9',
             textTransform: 'uppercase',
             margin: '0.5rem 0'
-          }}>THE SILVER  ERA</h1>
+          }}>THE SILVER ERA</h1>
           
           <p className="max-width-25vw" style={{ color: '#888', marginTop: '1rem' }}>
-            From Concept to Creation — Beautiful design has the power to captivate audiences.
+            Forging the Future into the Silver!
           </p>
           
           <div style={{
@@ -73,10 +73,10 @@ export default function HeroSection(){
           }}>
             <span style={{
           color: '#000',
-          fontSize: '1.1rem',
+          fontSize: '1rem',
           fontWeight: '600',
           letterSpacing: '0.05em'
-            }}>📅 Feb 3</span>
+            }}> On FEB - 02</span>
           </div>
         </div>
         
@@ -93,30 +93,7 @@ export default function HeroSection(){
         <div className="hero-flex">
           <div className="hero-cards-wrapper">
             <div className="hero-card">
-              <div className="avatars-flex">
-                <div className="avatar-a">
-                  <img
-                    alt=""
-                    src="https://cdn.prod.website-files.com/67021bf42ce586086aea69c0/67021bf42ce586086aea69fc_Team3.jpg"
-                    className="avatar-image"
-                  />
-                </div>
-                <div className="avatar-b">
-                  <img
-                    alt=""
-                    src="https://cdn.prod.website-files.com/67021bf42ce586086aea69c0/67021bf42ce586086aea6a3c_Team2.jpg"
-                    className="avatar-image"
-                  />
-                </div>
-                <div className="avatar-c">
-                  <img
-                    alt=""
-                    src="https://cdn.prod.website-files.com/67021bf42ce586086aea69c0/67021bf42ce586086aea6a3e_Team1.jpg"
-                    className="avatar-image"
-                  />
-                </div>
-              </div>
-              <h5>1.7k+ Clients</h5>
+              
             </div>
           </div>
           <div className="hero-cards-wrapper">

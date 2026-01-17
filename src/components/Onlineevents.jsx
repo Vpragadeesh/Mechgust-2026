@@ -58,7 +58,7 @@ export default function Onlineevents() {
     }
   }, [])
   const work = {
-    title: 'ONLINE EVENTS',
+    title: 'ONLINE   ',
     category: 'Marketing',
     client: 'Mutil-Digital Capita',
     date: 'March 15, 2024',
@@ -75,16 +75,66 @@ export default function Onlineevents() {
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
     ],
     events: [
-      { letter: 'A', label: 'IPL AUCTION',          image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-ipl-auction', price: '₹100' },
-      { letter: 'B', label: 'CONNECTIONS',          image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-connections', price: '₹100' },
-      { letter: 'C', label: 'GRAB A MINUTE',        image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-grab-a-minute', price: '₹100' },
-      { letter: 'D', label: 'GUESS THE LYRICS',     image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-guess-lyrics', price: '₹100' },
-      { letter: 'E', label: 'PICTO SCAVENGER HUNT', image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-scavenger-hunt', price: '₹100' },
-      { letter: 'F', label: 'GUESS THE LYRICS',     image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-guess-lyrics-2', price: '₹100' },
-      { letter: 'G', label: 'POSTER DESIGN',        image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-poster-design', price: '₹100' },
-      { letter: 'H', label: 'TREASURE HUNT',        image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-treasure-hunt', price: '₹100' },
-      { letter: 'I', label: 'SQUID GAME RELAY',     image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-squid-game', price: '₹100' },
-      { letter: 'J', label: 'SCRIBBLE',             image: 'events/image.jpg', description: 'Lorem ipsum dolor sext cun text dust\nLorem ipsum text', rules: ['Lorem ipsum dolor sext', 'Lorem ipsum text dust', 'Lorem ipsum text'], formLink: 'https://forms.google.com/online-scribble', price: '₹100' }
+      
+      
+      
+      { letter: 'A', label: 'FREE FIRE',          image: 'events/image.jpg', description: 'This Free Fire event tests players’ skills and teamwork in a competitive battle royale format, with strict fair play and discipline to ensure an exciting and balanced competition.', rules: ['Players must register with correct in-game names and team details.',
+'Only mobile devices are allowed; emulators, triggers, and third-party apps are banned.',
+'Players must join the lobby on time; late entries will not be allowed.',
+'Matches will be played in classic battle royale mode with a pre-decided format.',
+'Use of hacks, cheats, teaming, exploits, or toxic behavior leads to disqualification.',
+'Judges’ and organizers’ decisions are final and cannot be contested.'], formLink: 'https://forms.gle/eZSUJGW6CRzU6uTM6', price: 'Entry Fee ₹50' },
+      
+      
+      
+      
+      
+      { letter: 'B', label: 'BGMI',          image: 'events/image.jpg', description: 'This BGMI event delivers intense battle royale action where players showcase skill, strategy, and teamwork under strict fair-play rules for a balanced and thrilling gaming experience.', rules: ['Players must register with correct in-game names and team details.',
+'Only mobile devices are allowed; emulators, triggers, and third-party apps are banned.',
+'Players must join the lobby on time; late entries will not be entertained.',
+'Matches will be played in classic battle royale mode with a pre-decided format.',
+'Use of hacks, cheats, teaming, exploits, or toxic behavior results in disqualification.',
+'Judges’ and organizers’ decisions are final and cannot be contested.'], formLink: 'https://forms.gle/eZSUJGW6CRzU6uTM6', price: 'Entry Fee ₹50' },
+      
+      
+      
+      
+      
+      
+      { letter: 'C', label: 'PHOTOGRAPHY',        image: 'events/image.jpg', description: 'This photography event invites participants to showcase creativity through original images, with fair judging based on clear guidelines to ensure equal opportunity for all.', rules: ['Photos must be original and within the size limit.',
+'DSLR and mobile cameras are allowed; AI images are not permitted.',
+'Only basic colour and image adjustments are allowed.',
+'No watermarks, logos, or identifying marks on images.',
+'Entries must be submitted before the deadline.',
+'Judges’ and organizers’ decisions are final.'], formLink: 'https://forms.gle/eZSUJGW6CRzU6uTM6', price: 'Entry Fee ₹50' },
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      { letter: 'D', label: 'MEME MANIA',     image: 'events/image.jpg', description: 'Meme Mania is a fun and creative event where participants showcase humor and originality through image-based memes, judged on popularity and quality while ensuring fair play and content integrity.', rules: ['Participants must submit their Instagram profile for verification and are allowed only one entry.',
+'The meme concept is open-themed and must be original without copyright infringement.',
+'Only image memes are allowed; videos are not permitted.',
+'Auto likes are strictly prohibited and will result in disqualification.',
+'Watermarks and political, violent, or adult content are not allowed.',
+'Winners are decided based on likes received and judges’ evaluation.'], formLink: 'https://forms.gle/eZSUJGW6CRzU6uTM6', price: 'Entry Fee ₹50' },
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     ]
   }
 
@@ -98,7 +148,22 @@ export default function Onlineevents() {
 
       <section className="events-section">
         <div className="w-layout-blockcontainer container w-container">
-          <h2 className="events-title">{work.title} EVENTS</h2>
+
+           <h2 className="events-title">{work.title} EVENTS</h2>
+
+<p className="max-width-25vw" style={{ color: '#888', marginTop: '0.5rem' ,}}>
+  Scroll down to see all the events
+</p>
+          
+
+
+
+
+
+
+
+
+
 
           <div className="events-grid">
             {work.events.map((event, i) => (
